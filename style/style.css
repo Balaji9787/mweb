@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap");
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  border: 1px solid #232943;
+  box-shadow: inset 0 0 2.5px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #05ff64, #e6fe1d);
+  border-radius: 10px;
+}
+:root {
+  --color: #1a1a1a;
+  --btn: linear-gradient(#07c3fb, #04627e);
+  --text1: #2a2a2a;
+  --text2: #fff;
+  --text3: #07c3fb;
+  --hover: rgba(255, 255, 255, 0.2);
+  --background: #eaeaea;
+  --glass: rgba(255, 255, 255, 0.6);
+  --border1: 1px solid rgba(255, 255, 255, 0.25);
+  --border2: 1px solid rgba(255, 255, 255, 0.5);
+  --box-color: rgba(255, 255, 255, 0.2);
+  --shadow1-color: 0 5px 10px rgba(0, 0, 0, 0.6);
+
+  /*===== Transition =====*/
+  --tran-05: all 0.5s ease;
+  --tran-03: all 0.3s ease;
+  --tran-02: all 0.2s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: var(--background);
+}
+body.dark {
+  --color: #fff;
+  --btn: linear-gradient(#07c3fb, #04627e);
+  --text1: #fff;
+  --text2: #2a2a2a;
+  --text3: #07c3fb;
+  --hover: rgba(44, 44, 44, 0.2);
+  --background: #1a1a1a;
+  --glass: rgba(44, 44, 44, 0.6);
+  --border1: 1px solid rgba(124, 124, 124, 0.25);
+  --border2: 1px solid rgba(124, 124, 124, 0.5);
+  --box-color: rgba(54, 54, 54, 0.4);
+  --shadow1-color: 0 5px 10px rgba(0, 0, 0, 0.6);
+}
+header {
+  position: fixed;
+  top: 0s;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  border-bottom: var(--border2);
+  backdrop-filter: blur(4px);
+  background: var(--glass);
+}
+header .logo {
+  height: 30px;
+  margin-left: 10px;
+}
+header .logo img {
+  height: 100%;
+}
+header ul,
+.header_menu {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 50px;
+  margin-right: 10px;
+}
+.header_menu {
+  position: fixed;
+  left: 50%;
+  padding: 0 5px;
+  align-items: center;
+  transform: translateX(-50%);
+}
+header ul li,
+.header_menu li {
+  position: relative;
+  list-style: none;
+  height: 40px;
+  width: 40px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header_menu li:hover,
+header ul li:hover {
+  background: #05ff64;
+}
+header ul li i,
+.header_menu li i {
+  font-size: 20px;
+}
+header ul li:hover i {
+  color: #04627e;
+}
+header ul li .title,
+.header_menu li .title {
+  display: none;
+  position: relative;
+  left: 0;
+  bottom: -20px;
+  z-index: 1;
+}
